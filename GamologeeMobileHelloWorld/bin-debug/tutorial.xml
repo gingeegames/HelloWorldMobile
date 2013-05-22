@@ -1,0 +1,17 @@
+<tutorialScreen>
+  <!--  Actions : null,Click,Drag,Assemble,WindowEvent,END    
+  		Visual: null,HighlightRect,HighlightRound,Glow,ArrowRight,ArrowTop,ArrowLeft,ArrowBottom,OscilatingGlow,MouseMove,Clear
+  		okAnnotation: Great,LetsRock,Skip         
+  		exceptions = 'null' 
+  		windowLocation:TOP_LEFT,TOP_MID,TOP_RIGHT,BUTTOM_LEFT,BUTTOM_MID,BUTTOM_RIGHT,MIDDLE   
+  		****** DELAY IS QUANTIZED TO HALF SECONDS! ****** 
+		****** SOUND ENGINE NOT IMPLEMENTED IN CURRENT VERSION ****** 
+		-->
+  		
+	<Lesson id='1' name='Welcome Notes '>
+		<Text id = '1' text = "Welcome to Gamologee tutorial module!" soundFile = 'null' attachedItemID = 'null' action = 'null' visual = 'null' delay = '2' okAnnotation = 'ok' exceptions = 'null' windowLocation = 'TOP_MID'/>
+		<Text id = '2' text = "This is the Hello World text." soundFile = 'null' attachedItemID = 'helloWorldText' action = 'null' visual = 'HighlightRect,ArrowTop' delay = '7' okAnnotation = 'Great' exceptions = 'null' windowLocation = 'BUTTOM_MID'/>
+		<Text id = '3' text = "Thanks fo using this demo!"  soundFile = 'null' attachedItemID = 'null' action = 'null' visual = 'null' delay = '0' okAnnotation = 'LetsRock' exceptions = 'null' windowLocation = 'MIDDLE' />
+	</Lesson>
+	
+</tutorialScreen>
