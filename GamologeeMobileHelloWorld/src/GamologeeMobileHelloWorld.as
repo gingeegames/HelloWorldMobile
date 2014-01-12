@@ -48,7 +48,7 @@ package
 			stage.align = StageAlign.TOP_LEFT;
 			
 			//>>>> GAMOLOGEE INITIALIZATION <<<<<<
-			Gamologee.init(stage, "settings.xml", onCompleteSettings, Gamologee.CUSTOM, GingeeGuiModule, GingeeAssetsIntegrator, GingeeTutorialModule);
+			Gamologee.init(stage, "settings.xml", onCompleteSettings, Gamologee.CUSTOM, '',GingeeGuiModule, GingeeAssetsIntegrator, GingeeTutorialModule);
 		}
 		
 		
@@ -62,7 +62,7 @@ package
 			
 			// setup a dynamic text field
 			const helloWorld:GuiTextQuick = new GuiTextQuick("hello world!", 60, 0xff0000, '', uint.MAX_VALUE, 1, "helloWorldText");
-			helloWorld.Align = GuiElementAlignmentMethods.STAGE_MIDDLE_CENTER;
+			helloWorld.align = GuiElementAlignmentMethods.STAGE_MIDDLE_CENTER;
 			addChild(helloWorld);
 			
 			//activate a simple hello-tutorial
