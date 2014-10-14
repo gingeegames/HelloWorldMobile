@@ -3,9 +3,12 @@ package
 	import com.gingeegames.gamologee.guiModule.GingeeGuiModule;
 	import com.gingeegames.gamologee.guiModule.gui.alignment.enum.GuiElementAlignmentMethods;
 	import com.gingeegames.gamologee.guiModule.gui.text.GuiTextQuick;
+	import com.gingeegames.gamologee.guiModule.settings.GuiModuleSettings;
+	import com.gingeegames.gamologee.guiModule.utils.ScalingFactors;
 	import com.gingeegames.gingeeAssetsIntegrator.GingeeAssetsIntegrator;
-	import com.gingeegames.gingeeGamesInitiator.Gamologee;
+	import com.gingeegames.gingeeGamesInitiator.Gingee;
 	import com.gingeegames.gingeeTutorialModule.GingeeTutorialModule;
+	import com.gingeegames.utils.ShapeFactory;
 	
 	import flash.display.Bitmap;
 	import flash.display.Sprite;
@@ -13,7 +16,9 @@ package
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
 	
-	public class GamologeeMobileHelloWorld extends Sprite
+	import tutorial.TutorialVirutal;
+	
+	public class GingeeMobileHelloWorld extends Sprite
 	{
 		// EMBED FONTS
 		[Embed(source="ARIAL.TTF", fontName="_arial", embedAsCFF="false")] 
@@ -32,7 +37,9 @@ package
 		public static const _xml:Class;
 		public static const xml:Object = new _xml();
 		
-		public function GamologeeMobileHelloWorld()
+		
+		public static var helloWorldTxt:GuiTextQuick;
+		public function GingeeMobileHelloWorld()
 		{
 			super();
 			// make sure stage is ready
@@ -47,8 +54,8 @@ package
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
 			
-			//>>>> GAMOLOGEE INITIALIZATION <<<<<<
-			Gamologee.init(stage, "settings.xml", onCompleteSettings, Gamologee.CUSTOM, '',GingeeGuiModule, GingeeAssetsIntegrator, GingeeTutorialModule);
+			//>>>> Gingee INITIALIZATION <<<<<<
+			Gingee.init(stage, "settings.xml", onCompleteSettings, Gingee.CUSTOM, '',GingeeGuiModule, GingeeAssetsIntegrator, GingeeTutorialModule);
 		}
 		
 		
@@ -61,9 +68,9 @@ package
 			GingeeGuiModule.createSpriteAtlas("default", spriteBitmap, XML(xml));
 			
 			// setup a dynamic text field
-			const helloWorld:GuiTextQuick = new GuiTextQuick("hello world!", 60, 0xff0000, '', uint.MAX_VALUE, 1, "helloWorldText");
-			helloWorld.align = GuiElementAlignmentMethods.STAGE_MIDDLE_CENTER;
-			addChild(helloWorld);
+			helloWorldTxt = new GuiTextQuick("hello world!", 60, 0xff0000, '', uint.MAX_VALUE, 1, "helloWorldText");
+			helloWorldTxt.align = GuiElementAlignmentMethods.STAGE_MIDDLE_CENTER;
+			addChild(helloWorldTxt);
 			
 			//activate a simple hello-tutorial
 			helloTutorial();
@@ -73,12 +80,16 @@ package
 		
 		private function helloTutorial():void
 		{
+			TutorialVirutal.Instance.init();
 			GingeeTutorialModule.startTutorial("tutorial.xml", onCompleteTutorials);
 		}
 		
 		private function onCompleteTutorials():void
 		{
-			trace("turtorials complete!");
+			GingeeTutorialModule.quitTutorials();
+			trace("turtorial complete!");
+			helloWorldTxt.text = "turtorial complete!";
+			GingeeMobileHelloWorld.helloWorldTxt.align = GuiElementAlignmentMethods.STAGE_MIDDLE_CENTER;
 		}
 	}
 }
