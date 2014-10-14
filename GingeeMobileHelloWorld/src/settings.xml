@@ -6,10 +6,10 @@
 	    <!--  GOOGLE ANALYTICS   -->
 	    <!--------------------------------------->
 	    
-	    <property name='googleAnalyticsID' value='XXXXXXXXX'/>
+	    <!-- <property name='googleAnalyticsID' value='XXXXXXXXX'/>
 	    <property name='googleAnalyticsOn' value='true' />
 	    <property name='keepTrackOfButtons' value='true' />
-	    <property name='GoogleAnalyticsDebugMode' value='false' />
+	    <property name='GoogleAnalyticsDebugMode' value='false' />-->
 	    
 	    <!--------------------------------------->
 	    <!--  GINGEE ANALYTICS   -->
@@ -30,7 +30,7 @@
 		<property name='autoScale_x_y_positions' value='false'/>
 		<property name='autoScaleComponnentsDimentions' value='false'/>
 		<property name='useSmoothing' value='true'/>
-		<property name='keepTrackOfComponnents' value='false'/>
+		<property name='keepTrackOfComponnents' value='true'/>
 		<property name='useMemoryTracker' value='true'/>
 		<property name='draggingProperties' MOUSE_DELTA_MAX_FOR_CLICK='23' MOUSE_DELTA_X_MIN_FOR_SIDE_DRAG='128' MOUSE_DELTA_Y_MAX_FOR_SIDE_DRAG='50' />
 		<property name='defFontName' value='_arial'/>
@@ -98,29 +98,29 @@
 	    <!--BOOLEAN. enables/disables text typewriter effect on tutorial texts -->
 	    <property name='typeText' value='true' />
 	    <!--String. The "Tutorial window frame" asset name in the sprite sheet -->
-	    <property name='tutorialWindowAsset' value='pop-up' />
+	    <property name='tutorialWindowAsset' value='TutorialWindow' />
 	     <!--String. The "Tutorial window Close button" asset name in the sprite sheet -->
-	    <property name='tutorialWindowCloseAsset' value='closeBtn' />
+	    <property name='tutorialWindowCloseAsset' value='TutorialClose' />
 	     <!--String. The "OK Button" asset name in the sprite sheet -->
-	    <property name='tutorialWindowOKButtonAsset' value='commandBtn' />
+	    <property name='tutorialWindowOKButtonAsset' value='TutorialBtn' />
 	     <!--String. The "Tutorial Cursor" asset name in the sprite sheet -->
 	    <property name='tutorialCursorAsset' value='TutorialCursor' />
 	     <!--String. The "Tutorial Cursor" asset name in the sprite sheet -->
 	    <property name='tutorialSpriteAtlasName' value='tutorialSpriteAtlas' />
 	
 		<!--INT. The "Tutorial window Close button" x displacement. this value will be scaled -->
-	    <property name='closeAssetDisplaceX' value='-30' />
+	    <property name='closeAssetDisplaceX' value='0' />
 	    <!--INT. The "Tutorial window Close button" y displacement. this value will be scaled -->
-	    <property name='closeAssetDisplaceY' value='-30' />
+	    <property name='closeAssetDisplaceY' value='0' />
 	    
 	    <!--------------------------------------->
 	    <!-- FONT SETTINGS -->
 	    <!--------------------------------------->
 	    
 	    <!--STRING. determine default text font. font MUST be manually embedded! -->
-	    <property name='fontName' value='_Gilb' />
+	    <property name='fontName' value='_arial' />
 	    <!--UINT. determine default text size in pixels. -->
-	    <property name='fontSize' value='32' />
+	    <property name='fontSize' value='25' />
 	    <!--UINT. determine default text color in HEX. -->
 	    <property name='fontColor' value='0xeeeeee' />
 	</tutorialSettings>

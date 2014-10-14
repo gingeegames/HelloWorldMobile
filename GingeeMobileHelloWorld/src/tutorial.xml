@@ -1,21 +1,21 @@
 <tutorialScreen>
 	<!-- Actions : null,Click,Drag,Assemble,WindowEvent,END Visual: null,HighlightRect,HighlightRound,Glow,ArrowRight,ArrowTop,ArrowLeft,ArrowBottom,OscilatingGlow,MouseMove,Clear 
-		okAnnotation: Great,LetsRock,Skip exceptions = 'null' windowLocation:TOP_LEFT,TOP_MID,TOP_RIGHT,BUTTOM_LEFT,BUTTOM_MID,BUTTOM_RIGHT,MIDDLE 
+		okAnnotation: Great,LetsRock,Skip exceptions = 'null' windowLocation:TOP_LEFT,TOP_MID,TOP_RIGHT,BOTTOM_LEFT,BOTTOM_MID,BOTTOM_RIGHT,MIDDLE 
 		****** DELAY IS QUANTIZED TO HALF SECONDS! ****** ****** SOUND ENGINE NOT 
 		IMPLEMENTED IN CURRENT VERSION ****** -->
 	<Lessons>
 		<Lesson id='1' name='Welcome Notes '>
-			<Text id='1' text="Welcome to Gamologee tutorial module!"
+			<Text id='1' text="Welcome to Gingee tutorial module!"
 				soundFile='null' attachedItemID='null' action='null' visual='null'
-				delay='2' okAnnotation='ok' exceptions='null' windowLocation='TOP_MID' />
+				delay='2' okAnnotation='ok' exceptions='null' windowLocation='TOP_RIGHT' />
 			<Text id='2' text="This is the Hello World text." soundFile='null'
 				attachedItemID='helloWorldText' action='null' visual='HighlightRect,ArrowTop'
-				delay='7' okAnnotation='Great' exceptions='null' windowLocation='BUTTOM_MID' />
+				delay='7' okAnnotation='Great' exceptions='null' windowLocation='BOTTOM_MID' />
 			<Text id='3' text="Thanks fo using this demo!" soundFile='null'
 				attachedItemID='null' action='null' visual='null' delay='0'
 				okAnnotation='LetsRock' exceptions='null' windowLocation='MIDDLE' />
 		</Lesson>
 	</Lessons>
-	<Exit id = '4' text = "Are you sure you want to exit from tutorial? you can see this tutorial again at anytime, just click the tutorial button from menu." okAnnotation = 'Yes' cancelAnnotation = 'No' okFunction = 'quitTutorial' cancelFunction = 'null' pauseFunction = 'pause' continueFunction = 'continueTutorial'>
+	<Exit id = '4' text = "Are you sure you want to exit from tutorial?" okAnnotation = 'Yes' cancelAnnotation = 'No' okFunction = 'quitTutorial' cancelFunction = 'null' pauseFunction = 'pause' continueFunction = 'continueTutorial'>
 	</Exit>
 </tutorialScreen>

@@ -20,15 +20,15 @@ package
 		public static const _arial:Class;
 		
 		// EMBED USED ASSETS
-		[Embed (source="assets/1.png")]
+		[Embed (source="/assets/1.png")]
 		private static const _bitmap:Class;
 		public static var spriteBitmap:Bitmap = new _bitmap() as Bitmap;
 		
-		[Embed (source="assets/Background.jpg")]
+		[Embed (source="/assets/Background.jpg")]
 		private static const _bitmapBG:Class;
 		public static var bg:Bitmap = new _bitmapBG() as Bitmap;
 		
-		[Embed (source="assets/1.xml", mimeType="application/octet-stream")]
+		[Embed (source="/assets/1.xml", mimeType="application/octet-stream")]
 		public static const _xml:Class;
 		public static const xml:Object = new _xml();
 		
@@ -60,7 +60,7 @@ package
 			GingeeGuiModule.setBackgroundImage(bg);
 			
 			// Create first sprite-atlas
-			GingeeGuiModule.createSpriteAtlas("default", spriteBitmap, XML(xml));
+			GingeeGuiModule.createSpriteAtlas("tutorialSpriteAtlas", spriteBitmap, XML(xml));
 			
 			// setup a dynamic text field
 			helloWorldTxt = new GuiTextQuick("hello world!", 60, 0xff0000, '', uint.MAX_VALUE, 1, "helloWorldText");
@@ -82,7 +82,8 @@ package
 			GingeeTutorialModule.submitFunctionDefinition("pause", pauseTutorial);
 			GingeeTutorialModule.submitFunctionDefinition("continueTutorial", continueTutorial);
 			
-			GingeeTutorialModule.startTutorial("tutorial.xml", onCompleteTutorials);
+			
+			GingeeTutorialModule.startTutorial("Tutorial.xml", onCompleteTutorials);
 		}
 		
 		private function quitTutorial():void
@@ -103,8 +104,7 @@ package
 		private function onCompleteTutorials():void
 		{
 			GingeeTutorialModule.quitTutorials();
-			trace("turtorial complete!");
-			helloWorldTxt.text = "turtorial complete!";
+			helloWorldTxt.text = "tutorial complete!";
 			GingeeMobileHelloWorld.helloWorldTxt.align = GuiElementAlignmentMethods.STAGE_MIDDLE_CENTER;
 		}
 	}
