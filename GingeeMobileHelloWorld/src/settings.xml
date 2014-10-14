@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<GamologeeSettings>
+<GingeeSettings>
 	<guiSettings>
 	
 		<!--------------------------------------->
@@ -124,4 +124,4 @@
 	    <!--UINT. determine default text color in HEX. -->
 	    <property name='fontColor' value='0xeeeeee' />
 	</tutorialSettings>
-</GamologeeSettings>
+</GingeeSettings>

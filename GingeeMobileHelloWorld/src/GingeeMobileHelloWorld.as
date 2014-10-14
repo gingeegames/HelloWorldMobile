@@ -83,7 +83,7 @@ package
 			GingeeTutorialModule.submitFunctionDefinition("continueTutorial", continueTutorial);
 			
 			
-			GingeeTutorialModule.startTutorial("Tutorial.xml", onCompleteTutorials);
+			GingeeTutorialModule.startTutorial("tutorial.xml", onCompleteTutorials);
 		}
 		
 		private function quitTutorial():void
@@ -104,7 +104,7 @@ package
 		private function onCompleteTutorials():void
 		{
 			GingeeTutorialModule.quitTutorials();
-			helloWorldTxt.text = "tutorial complete!";
+			helloWorldTxt.text = "Tutorial complete!";
 			GingeeMobileHelloWorld.helloWorldTxt.align = GuiElementAlignmentMethods.STAGE_MIDDLE_CENTER;
 		}
 	}
