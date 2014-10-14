@@ -3,20 +3,15 @@ package
 	import com.gingeegames.gamologee.guiModule.GingeeGuiModule;
 	import com.gingeegames.gamologee.guiModule.gui.alignment.enum.GuiElementAlignmentMethods;
 	import com.gingeegames.gamologee.guiModule.gui.text.GuiTextQuick;
-	import com.gingeegames.gamologee.guiModule.settings.GuiModuleSettings;
-	import com.gingeegames.gamologee.guiModule.utils.ScalingFactors;
 	import com.gingeegames.gingeeAssetsIntegrator.GingeeAssetsIntegrator;
 	import com.gingeegames.gingeeGamesInitiator.Gingee;
 	import com.gingeegames.gingeeTutorialModule.GingeeTutorialModule;
-	import com.gingeegames.utils.ShapeFactory;
 	
 	import flash.display.Bitmap;
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
-	
-	import tutorial.TutorialVirutal;
 	
 	public class GingeeMobileHelloWorld extends Sprite
 	{
@@ -78,10 +73,31 @@ package
 			// REST OF THE CODE GOES HERE
 		}
 		
+		// ............................. TUTORIAL HANDLING .....................................
+		
 		private function helloTutorial():void
 		{
-			TutorialVirutal.Instance.init();
+			// SUBMIT TUTORIAL FUNCTIONS FOR DYNAMIC TUTORIAL DATA INJECTION
+			GingeeTutorialModule.submitFunctionDefinition("quitTutorial", quitTutorial);
+			GingeeTutorialModule.submitFunctionDefinition("pause", pauseTutorial);
+			GingeeTutorialModule.submitFunctionDefinition("continueTutorial", continueTutorial);
+			
 			GingeeTutorialModule.startTutorial("tutorial.xml", onCompleteTutorials);
+		}
+		
+		private function quitTutorial():void
+		{
+			// Quit tutorial cleanup here
+		}
+		
+		private function pauseTutorial():void
+		{
+			// Pause tutorial cleanup here
+		}
+		
+		private function continueTutorial():void
+		{
+			// Continue tutorial cleanup here
 		}
 		
 		private function onCompleteTutorials():void
